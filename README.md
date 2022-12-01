@@ -62,4 +62,4 @@ Get your Spotify Wrapped for Facebook Messenger!
  
   - **If you'd like to view your top 100 phrases**, in the format `(phrase, total number of occurrences)`. If you indicate yes, it will print out those phrases sorted from highest to lowest frequency.
 
-5. In the `2022-messenger-wrapped` directory, open `index.html` to view and screenshot your Messenger Wrapped image! The profile picture and background design are generated each time you refresh the page—try it out :)
+5. In the `2022-messenger-wrapped` directory, open `index.html` to view and screenshot your Messenger Wrapped image! The profile picture is generated each time you refresh the page :)
