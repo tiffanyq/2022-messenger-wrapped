@@ -40,7 +40,7 @@ Get your Spotify Wrapped for Facebook Messenger!
 - `generate_messenger_wrapped.py`
 - `index.html`
 - `README.md`
-- `css/`
+- `style/`
 - `js/`
 - `messages/`
 
