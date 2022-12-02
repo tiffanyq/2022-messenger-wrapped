@@ -2,7 +2,6 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
-
 }
 
 #background {
@@ -43,7 +42,6 @@ body {
 	right: 0;
   margin: auto;
   background: rgb(229,129,46);
-
 }
 
 #container {
@@ -154,4 +152,30 @@ li::marker {
 
 #footer a:link, a:visited {
   color: rgb(19,20,18);
+}
+
+#pause-button {
+  top: 50px;
+  font-size: 36px;
+  border-radius: 0;
+  border: 0;
+  padding: 20px 25px;
+  z-index: 3;
+  position: fixed;
+  right: 50px;
+  color: rgb(255,255,255);
+  background:rgb(84,32,172);
+  font-family: Montserrat, sans-serif;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+#pause-button:hover {
+  background-color: rgb(19,20,18);
+}
+
+#pause-button-icon {
+  font-size: 36px;
+  margin-right: 8px;
 }

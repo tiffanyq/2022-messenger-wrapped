@@ -1,17 +1,18 @@
 const SHAPES = ["circle","square", "triangle"];
 const COLORS = ["orange", "pink", "green", "yellow", "black", "purple"];
-const NUM_SHAPE_LAYERS = getRandom(4,6);
+const NUM_SHAPE_LAYERS = getRandom(5,8);
 const MIN_OBJ = 4;
 const MAX_OBJ = 20;
 const PFP_SIZE = 235;
 const FRAME_RATE = 4;
-const HOLD_LENGTH = FRAME_RATE * 8;
+const HOLD_LENGTH = FRAME_RATE;
 let pContent;
 let currLayerNumber = 0;
 let holdCount = 1;
 let numLayersToDraw = 0;
 let countingUp = true;
 let holding = false;
+let paused = false;
 
 class ShapeBackground {
   constructor(width, height) {
@@ -73,7 +74,7 @@ class ShapeBackground {
     let currIncrement = 0;
     for (let i = 0; i < NUM_SHAPE_LAYERS; i++) {
       localRadii.push(currRadii - currIncrement);
-      currIncrement += (10 + Math.floor(getRandom(0,this.width/12)));
+      currIncrement += (8 + Math.floor(getRandom(0,this.width/16)));
     }
     return localRadii;
   }
@@ -147,36 +148,35 @@ function setup() {
   pContent = new ShapeBackground(PFP_SIZE, PFP_SIZE);
   frameRate(FRAME_RATE);
   background(color(84,32,172));
-  // kick off process
-  pContent.buildBackground(currLayerNumber);
-  currLayerNumber += 1;
 }
 
 function draw() {
-  background(color(84,32,172));
-  for (let i = 0; i < currLayerNumber; i++) {
-    pContent.buildBackground(i);
-  }
+  if (!paused) {
+    background(color(84,32,172));
+    for (let i = 0; i < currLayerNumber; i++) {
+      pContent.buildBackground(i);
+    }
 
-  if (countingUp) {
-    if (!holding) {
-      currLayerNumber = Math.min(currLayerNumber + 1, NUM_SHAPE_LAYERS);
-      if (currLayerNumber === NUM_SHAPE_LAYERS) {
-        holding = true;
+    if (countingUp) {
+      if (!holding) {
+        currLayerNumber = Math.min(currLayerNumber + 1, NUM_SHAPE_LAYERS);
+        if (currLayerNumber === NUM_SHAPE_LAYERS) {
+          holding = true;
+        }
+      } else {
+        holdCount += 1;
+        if (holdCount > HOLD_LENGTH) {
+          holdCount = 0;
+          holding = false;
+          countingUp = false;
+        }
       }
     } else {
-      holdCount += 1;
-      if (holdCount > HOLD_LENGTH) {
-        holdCount = 0;
-        holding = false;
-        countingUp = false;
+      currLayerNumber = Math.max(currLayerNumber - 1, 0);
+      if (currLayerNumber === 0) {
+        countingUp = true;
+        pContent.reset();
       }
-    }
-  } else {
-    currLayerNumber = Math.max(currLayerNumber - 1, 0);
-    if (currLayerNumber === 0) {
-      countingUp = true;
-      pContent.reset();
     }
   }
 }

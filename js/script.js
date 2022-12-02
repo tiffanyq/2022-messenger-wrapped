@@ -17,7 +17,8 @@ window.onload = function() {
   const topPhrases = document.getElementById("top-phrases");
   const totalMessages = document.getElementById("total-messages");
   const totalReactsAndStickers = document.getElementById("total-reacts-and-stickers");
-  const saveButton = document.getElementById("save-image");
+  const pauseButton = document.getElementById("pause-button");
+  pauseButton.addEventListener("click", pauseStartAnimation);
 
   // if person chose to show names, set heading to be "top people".
   // if person chose to show number of messages that their top people sent,
@@ -47,3 +48,16 @@ window.onload = function() {
   totalReactsAndStickers.innerText = yourData[TOTAL_REACTS_AND_STICKERS].toLocaleString();
 }
 
+function pauseStartAnimation() {
+  const pauseButtonText = document.getElementById("pause-button-text");
+  const pauseButtonIcon = document.getElementById("pause-button-icon");
+  if (paused) {
+    pauseButtonText.innerText = "Pause";
+    pauseButtonIcon.innerText = "pause";
+    paused = false;
+  } else {
+    pauseButtonText.innerText = "Play";
+    pauseButtonIcon.innerText = "play_arrow";
+    paused = true;
+  }
+}
