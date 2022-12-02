@@ -1,15 +1,15 @@
 # 2022 Messenger Wrapped
 by [@anotherbrowsertab](https://www.instagram.com/anotherbrowsertab/)
 
-Get your Spotify Wrapped for Facebook Messenger!
-- **Top People/Top # Messages Others Sent**: either the names of the people (max 5) who sent you the most messages this year, or the number of messages that each of those people sent you this year.
-- **Your Top Phrases**: phrases (max 5) that appeared the most in the messages you sent.
-- **Total Messages Sent**: the total number of messages sent by you (and anyone else sharing your name on Facebook that sent you messages).
-- **Total Reacts & Stickers Sent**: the total number of reactions used and stickers sent by you (and anyone else sharing your name on Facebook that sent you messages).
+## Get your Spotify Wrapped for Facebook Messenger!
+- **Top People/Top Number of Messages Others Sent**: you choose which one to show
+- **Your Top Phrases**
+- **Total Messages Sent**
+- **Total Reacts & Stickers Sent**
 
-[Originally built in 2020](https://github.com/tiffanyq/2020-messenger-wrapped) and refreshed for 2022! I built this to look through my own Messenger data after seeing lots of 2020 Spotify Wrapped data floating around. The process is a bit involved but this is to avoid needing to upload your Messenger data somewhere.
+[Originally built in 2020](https://github.com/tiffanyq/2020-messenger-wrapped) and refreshed for 2022, I originally built this to look through my own Messenger data after seeing 2020 Spotify Wrapped data floating around. Everything is done locally so that your Messenger data stays with you and isn't uploaded anywhere.
 
-❤️ How do we feel about the data we share? ❤️
+💭 Spotify for Developers allows access by API to info like a user's top artists and tracks. When I looked, Meta for Developers didn't have something similar to access other users' messages (in my opinion this is good lol). But they do keep this info about you and you can retrieve it! In general, I am fascinated by how we feel about the data we share. It may feel different giving an entity your listening history versus your messages. What kinds of access and surveillance do we allow for ourselves and when; what is a good enough reason for it? ❤️
 
 ![Example output from Messenger Wrapped](./example_output.png)
 
@@ -19,7 +19,7 @@ Get your Spotify Wrapped for Facebook Messenger!
 - some sort of terminal, command shell, etc to run the Python script in
 
 ## Messenger Wrapped uses the following external resources:
-- [Google Fonts](https://fonts.google.com/) - provides the font Montserrat
+- [Google Fonts](https://fonts.google.com/) - provides the font Montserrat and pause and play icons
 - [p5.js](https://p5js.org/) - used to generate shapes for profile picture and background
 
 ## How to use Messenger Wrapped
