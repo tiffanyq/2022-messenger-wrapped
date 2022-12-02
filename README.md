@@ -9,6 +9,8 @@ Get your Spotify Wrapped for Facebook Messenger!
 
 [Originally built in 2020](https://github.com/tiffanyq/2020-messenger-wrapped) and refreshed for 2022! I built this to look through my own Messenger data after seeing lots of 2020 Spotify Wrapped data floating around. The process is a bit involved but this is to avoid needing to upload your Messenger data somewhere.
 
+❤️ How do we feel about the data we share? ❤️
+
 ![Example output from Messenger Wrapped](./example_output.png)
 
 ## To run Messenger Wrapped, you will need:
@@ -62,4 +64,4 @@ Get your Spotify Wrapped for Facebook Messenger!
  
   - **If you'd like to view your top 100 phrases**, in the format `(phrase, total number of occurrences)`. If you indicate yes, it will print out those phrases sorted from highest to lowest frequency.
 
-5. In the `2022-messenger-wrapped` directory, open `index.html` to view and screenshot your Messenger Wrapped image! The profile picture is generated each time you refresh the page :)
+5. In the `2022-messenger-wrapped` directory, open `index.html` to view and screenshot your Messenger Wrapped image! The profile picture is randomly generated!
