@@ -1,0 +1,157 @@
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+
+}
+
+#background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+body {
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  z-index: 1;
+}
+
+#body-gradient {
+  width: 100vw;
+  min-height: 900px;
+  height: 100%;
+  position: absolute;
+  background: rgb(84,32,172);
+  background-image: url("./ducks.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#saved-photo-gradient {
+  width: 600px;
+  height: 900px;
+  position: absolute;
+  top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  margin: auto;
+  background: rgb(229,129,46);
+
+}
+
+#container {
+  width: 400px;
+  height: 698px;
+  border-radius: 8px;
+  background-color: rgb(211, 99, 170);
+  color: rgb(19,20,18);
+  position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  margin: auto;
+}
+
+h1 {
+  color: rgb(19,20,18);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+ol {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
+  font-weight: 700;
+}
+
+li {
+  counter-increment: custom;
+}
+
+ol li:before {
+  content: counter(custom) " ";
+  padding-right: 4px;
+}
+
+ol li:first-child {
+    counter-reset: custom;
+}
+
+li::marker {
+  color: rgb(19,20,18);
+}
+
+#profile-photo {
+  width: 235px;
+  height: 235px;
+  background: rgb(245,228,51);
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 26px;
+  z-index: 2;
+}
+
+#profile-photo img {
+  width: 150px;
+  height: 150px;
+  z-index: 3;
+  position: absolute;
+  top: 42.5px;
+  left: 42.5px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px 19px;
+}
+
+#top-row {
+  margin-top: 14px;
+  height: 250px;
+}
+
+#bottom-row p {
+  font-size: 30px;
+  margin: auto;
+}
+
+.block {
+  width: 167px;
+}
+
+.block p, #footer {
+  font-weight: 700;
+}
+
+#footer {
+  background-color: rgb(211, 99, 170);
+  color: rgb(19,20,18);
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  position: absolute;
+  height: 52px;
+  width: 370px;
+  bottom: 0;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+#footer a:link, a:visited {
+  color: rgb(19,20,18);
+}

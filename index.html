@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Messenger Wrapped</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js" integrity="sha512-WJXVjqeINVpi5XXJ2jn0BSCfp0y80IKrYh731gLRnkAS9TKc5KNt/OfLtu+fCueqdWniouJ1ubM+VI/hbo7POQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/your_messenger_wrapped.js"></script>
+    <script src="js/sketch.js"></script>
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <div id="body-gradient">
+      <div id="saved-photo-gradient">
+        <div id="container">
+          <div id="profile-photo">
+            <img id="album-image" src="style/ducks.jpg"/> <!-- @anotherbrowsertab took this photo of the ducks -->
+          </div>
+          <div id="top-row" class="row">
+            <div class="block">
+              <h1 id="top-people-or-num-messages-sent">Top People</h1>
+              <ol id="top-people">
+              </ol>
+            </div>
+            <div class="block">
+              <h1>Your Top Phrases</h1>
+              <ol id="top-phrases">
+              </ol>
+            </div>
+          </div>
+          <div id="bottom-row" class="row">
+            <div class="block">
+              <h1>Total Messages Sent</h1>
+              <p id="total-messages"></p>
+            </div>
+            <div class="block">
+              <h1>Total Reacts &amp; Stickers Sent</h1>
+              <p id="total-reacts-and-stickers"></p>
+            </div>
+        </div>
+          <div id="footer">
+            <a target="_blank" href="https://www.instagram.com/anotherbrowsertab/">&#64;anotherbrowsertab</a>
+            <span>&#35;MESSENGERWRAPPED</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
