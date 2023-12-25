@@ -11,6 +11,7 @@ your 2020 Messenger Wrapped!
 
 import json
 import os
+import re
 import string
 
 MESSENGER_DIR = './messages/inbox'
@@ -56,7 +57,7 @@ if __name__ == "__main__":
 
   for dir, _, files in os.walk(MESSENGER_DIR):
     for file in files:
-      if file == 'message_1.json':
+      if re.search("message\_[0-9]+\.json$", file):
         with open(os.path.join(dir, file)) as json_file:
           data = json.load(json_file)
           is_group_chat = len(data['participants']) > 2
